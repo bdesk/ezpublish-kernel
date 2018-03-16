@@ -1909,11 +1909,11 @@ DROP TABLE IF EXISTS `ezsearch_search_phrase`;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ezsearch_search_phrase` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `phrase` varchar(250) DEFAULT NULL,
+  `phrase` varchar(191) DEFAULT NULL,
   `phrase_count` int(11) DEFAULT '0',
   `result_count` int(11) DEFAULT '0',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `ezsearch_search_phrase_phrase` (`phrase` (191)),
+  UNIQUE KEY `ezsearch_search_phrase_phrase` (`phrase`),
   KEY `ezsearch_search_phrase_count` (`phrase_count`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
